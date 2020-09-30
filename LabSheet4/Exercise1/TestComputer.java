@@ -1,8 +1,8 @@
 package LabSheet4.Exercise1;
 /* TestComputer.java
  * By: Faun Schutz
- * Start: 29/08/2020
- * Finish: 29/08/2020
+ * Start: 30/08/2020
+ * Finish: 30/08/2020
  * */
 
 import javax.swing.*;
@@ -24,7 +24,7 @@ public class TestComputer {
         output += "\n\nCalling the multi-argument Computer constructor. " +
                   "The second Computer object details are: \n\n" + c2.toString();
 
-        Computer c3 = new Computer("Apple","Tablet",3.65,-16,-500.25);
+        Computer c3 = new Computer("Apple","Tablet",-3.65,-16,-500.25);
 
         output += "\n\nCalling the multi-argument Computer constructor. " +
                 "The third Computer object details are: \n\n" + c3.toString();

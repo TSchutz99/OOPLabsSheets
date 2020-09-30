@@ -1,8 +1,8 @@
 package LabSheet4.Exercise1;
 /* Computer.java
  * By: Faun Schutz
- * Start: 29/08/2020
- * Finish: 29/08/2020
+ * Start: 30/08/2020
+ * Finish: 30/08/2020
  * */
 public class Computer {
 
