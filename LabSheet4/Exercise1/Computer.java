@@ -13,11 +13,7 @@ public class Computer {
     private double price;
 
     public Computer(){
-        setManufacturer("Not available");
-        setType("Not available");
-        setSpeed(0);
-        setRAM(0);
-        setPrice(0);
+        this("Not available","Not available",0,0,0);
     }
     public Computer(String manufacturer,String type,double speed,int RAM,double price){
         setManufacturer(manufacturer);
