@@ -13,11 +13,11 @@ public class Computer {
     private double price;
 
     public Computer(){
-        manufacturer = "Not available";
-        type = "Not available";
-        speed = 0;
-        RAM = 0;
-        price = 0;
+        setManufacturer("Not available");
+        setType("Not available");
+        setSpeed(0);
+        setRAM(0);
+        setPrice(0);
     }
     public Computer(String manufacturer,String type,double speed,int RAM,double price){
         setManufacturer(manufacturer);
@@ -25,7 +25,6 @@ public class Computer {
         setSpeed(speed);
         setRAM(RAM);
         setPrice(price);
-
     }
 
     public String toString(){
