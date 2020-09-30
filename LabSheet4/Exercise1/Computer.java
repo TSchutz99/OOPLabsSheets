@@ -51,13 +51,15 @@ public class Computer {
         this.type = type;
     }
     public void setSpeed(double speed){
-        if(speed>0)
+        if(speed > 0)
             this.speed = speed;
     }
     public void setRAM(int RAM){
-        this.RAM = RAM;
+        if(RAM > 0)
+            this.RAM = RAM;
     }
     public void setPrice(double price){
-        this.price = price;
+        if(price > 0)
+            this.price = price;
     }
 }
