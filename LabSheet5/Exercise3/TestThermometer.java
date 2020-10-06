@@ -21,5 +21,15 @@ public class TestThermometer{
                                 "\nThird Thermometer:\nCurrent temperature: " + T3.getCurrentTemp() +
                                 "\nMaximum temperature: " + T3.getMaximumTemp() + "\nMinimum temperature: " + T3.getMinimumTemp(),
                             " ", JOptionPane.INFORMATION_MESSAGE);
+
+        int temperature = Integer.parseInt(JOptionPane.showInputDialog("Please enter the current temperature of the first thermometer:"));
+
+        T1.setTemperature(temperature);
+
+        JOptionPane.showMessageDialog(null, "******Thermometer Testing******" +
+                                    "\n\nCalling setTemperature() .... setting the temperature of the first Thermometer to " + temperature + "C" +
+                                    "\nFirst Thermometer:\nCurrent temperature: " + T1.getCurrentTemp() +
+                                    "\nMaximum temperature: " + T1.getMaximumTemp() + "\nMinimum temperature: " + T1.getMinimumTemp());
+
     }
 }
