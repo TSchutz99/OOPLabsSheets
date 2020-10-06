@@ -1,8 +1,8 @@
 package LabSheet5.Exercise2;
 /* Book.java
  * By: Faun Schutz
- * Start: 02/09/2020
- * Finish: 02/09/2020
+ * Start: 06/09/2020
+ * Finish: 06/09/2020
  * */
 
 import javax.swing.*;
