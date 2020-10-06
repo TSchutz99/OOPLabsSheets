@@ -32,7 +32,7 @@ public class Computer {
                 "   RAM: " + getRAM() + "   Price: " + getPrice();
     }
 
-    package String getManufacturer(){
+    public String getManufacturer(){
         return manufacturer;
     }
     public String getType(){
