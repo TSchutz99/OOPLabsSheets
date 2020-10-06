@@ -22,6 +22,10 @@ public class TestBook {
 
         Book b2 = new Book();
 
+        Computer c1 = new Computer();
+
+        System.out.println(c1.getManufacturer());
+
         b1.setTitle(JOptionPane.showInputDialog("Please enter the title of your favourite book"));
         b1.setPrice(Double.parseDouble(JOptionPane.showInputDialog("Please enter the price of your favourite book")));
         b1.setISBN(JOptionPane.showInputDialog("Please enter the ISBN of your favourite book"));
