@@ -1,4 +1,4 @@
-package LabSheet5.Exercise1;
+package LabSheet5.Exercise2;
 /* Book.java
  * By: Faun Schutz
  * Start: 02/09/2020
@@ -21,6 +21,10 @@ public class TestBook {
         Book b1 = new Book();
 
         Book b2 = new Book();
+
+        Computer c1 = new Computer();
+
+        System.out.println(c1.getManufacturer());
 
         b1.setTitle(JOptionPane.showInputDialog("Please enter the title of your favourite book"));
         b1.setPrice(Double.parseDouble(JOptionPane.showInputDialog("Please enter the price of your favourite book")));
