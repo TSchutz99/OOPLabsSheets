@@ -20,7 +20,8 @@ public class TestBankAccount{
                   "\n\nNow we are calling the setInterestRate() method to change the interest rate to 0.5.";
         BankAccount.setInterestRate(0.5);
         output += "\n\nThe first bank account details are: \n\n" + account1.toString() +
-                  "\n\nThe second bank account details are: \n\n" + account2.toString();
+                  "\n\nThe second bank account details are: \n\n" + account2.toString() +
+                  "\n\nThe number of BankAccount objects is: " + BankAccount.getCount();
 
         JOptionPane.showMessageDialog(null, output," ", JOptionPane.INFORMATION_MESSAGE);
     }

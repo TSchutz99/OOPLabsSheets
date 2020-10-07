@@ -44,6 +44,7 @@ public class BankAccount {
     public static double getInterestRate(){
         return interestRate;
     }
+    public static int getCount(){return count;}
 
     public String toString(){
         return "Owner: " + getOwner() + "   Number: " + getNumber() + "   Interest Rate: " + getInterestRate();
