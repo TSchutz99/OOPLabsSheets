@@ -10,6 +10,7 @@ public class BankAccount {
     private String owner;
     private int number;
     private static double interestRate;
+    private static int count = 1;
 
     public BankAccount(){
         this("Owner not Available",0,0);
@@ -18,16 +19,20 @@ public class BankAccount {
         setOwner(owner);
         setNumber(number);
         setInterestRate(interestRate);
+        incrementCount();
     }
 
     public void setOwner(String owner){
         this.owner = owner;
     }
     public void setNumber(int number){
-        this.number = number;
+        this.number = count;
     }
     public static void setInterestRate(double interestRate) {
         BankAccount.interestRate = interestRate;
+    }
+    private static void incrementCount() {
+        count++;
     }
 
     public String getOwner(){
