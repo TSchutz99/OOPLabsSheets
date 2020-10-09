@@ -51,13 +51,7 @@ public class Animal{
 		//if(continents!=null)
 		//	this.continents = Arrays.copyOf(continents,continents.length);
 		if(continents != null){
-			// int length = continents.length;
-			String newContinents[continents.length]; /* keep getting three errors on this bit of code and I
-													  * figure out why * ']' expected
-													  *                * ';' expected
-													  *                * Unexpected token
-													  * The three there are the errors that I keep getting.
-													  */
+			String newContinents[] = new String[continents.length];
 
 			for(int i = 0; i < continents.length; i++)
 			{
