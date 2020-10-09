@@ -46,10 +46,20 @@ public class Animal{
 	public void setType (String type) {
 		this.type = type;
 	}
-	public void setContinents (String continents[]) {    
+	public void setContinents (String continents[]) {
 		//this.continents=continents; //potential breaking of encapsulation
-		if(continents!=null)
-			this.continents = Arrays.copyOf(continents,continents.length);
+		//if(continents!=null)
+		//	this.continents = Arrays.copyOf(continents,continents.length);
+		if(continents != null){
+			int length = continents.length;
+			String newContinents[length];
+
+			for(int i = 0; i < continents.length; i++)
+			{
+				newContinents[i] = continents[i];
+			}
+			this.continents = newContinents;
+		}
 	}
 	public void setWeight(double weight) {
 		this.weight = weight;
