@@ -22,5 +22,8 @@ public class TestAnimal {
 
 		animal1 = new Animal("Lion",lionContinents,200,40);
 		System.out.println(animal1);
+
+		lionContinents[0] = "Europe";
+		System.out.println("\n" + animal1);
 	}
 }
