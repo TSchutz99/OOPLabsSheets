@@ -32,7 +32,14 @@ public class Institute{
     }
 
     public int getTotalStudents(){
-        return 0; // Next job to do.
+        int totalStudents = 0;
+        Department[] departList = new Department[getDepartments().length];
+        for(int i = 0; i < getDepartments().length; i++){
+            if (getDepartments()[i] != null){
+                departList[i] = getDepartments()[i];
+            }
+        }
+        return totalStudents;
     }
 
     public String toString(){
@@ -41,7 +48,7 @@ public class Institute{
 
         for(int i = 0; i < getDepartments().length; i++)
             if(getDepartments()[i] != null)
-                output += getDepartments()[i] + "\n";
+                output += getDepartments()[i];
 
         output += "\n\nTotal students in institute: " + getTotalStudents();
 
