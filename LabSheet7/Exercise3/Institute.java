@@ -36,6 +36,6 @@ public class Institute{
     }
 
     public String toString(){
-        return "Departments: \n" + getDepartments();
+        return "Name: " + getName() + "\n\nDepartments: \n" + getDepartments();
     }
 }

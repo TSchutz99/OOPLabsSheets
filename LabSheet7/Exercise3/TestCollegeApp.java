@@ -21,5 +21,9 @@ public class TestCollegeApp {
 
         Department department1 = new Department("Computing", computingStudents);
         Department department2 = new Department("Creative Media", creativeMediaStudents);
+
+        Department[] departments = new Department[5];
+        departments[0] = department1;
+        departments[1] = department2;
     }
 }
