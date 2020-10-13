@@ -44,10 +44,8 @@ public class TestAnimal {
 		System.out.println("\n\nThe details of all the animals in the Animal array are:\n\n");
 
 		for(int i=0;i<allAnimals.length;i++){
-			if(allAnimals[i] == null)
-				break;
-
-			System.out.println(allAnimals[i] + "\n\n");
+			if(allAnimals[i] != null)
+				System.out.println(allAnimals[i] + "\n\n");
 		}
 
 	}
