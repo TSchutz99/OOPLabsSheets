@@ -6,9 +6,9 @@ package LabSheet7.Exercise3;
  */
 public class Department {
     private String name;
-    private Students students[];
+    private Students[] students;
 
-    public Department(String name, Students students[]){
+    public Department(String name, Students[] students){
         setName(name);
         setStudents(students);
     }
