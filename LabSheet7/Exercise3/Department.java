@@ -6,9 +6,9 @@ package LabSheet7.Exercise3;
  */
 public class Department {
     private String name;
-    private Students[] students;
+    private Student[] students;
 
-    public Department(String name, Students[] students){
+    public Department(String name, Student[] students){
         setName(name);
         setStudents(students);
     }
@@ -20,10 +20,10 @@ public class Department {
         return name;
     }
 
-    public void setStudents(Students[] students){
+    public void setStudents(Student[] students){
         this.students = students;
     }
-    public Students[] getStudents(){
+    public Student[] getStudents(){
         return students;
     }
 

@@ -4,12 +4,12 @@ package LabSheet7.Exercise3;
  * Start: 13/09/2020
  * Finish: 13/09/2020
  */
-public class Students {
+public class Student {
     private int id;
     private String name;
     private String department;
 
-    public Students(int id, String name, String department){
+    public Student(int id, String name, String department){
         setId(id);
         setName(name);
         setDepartment(department);
