@@ -11,9 +11,8 @@ public class TestCollegeApp {
         Student student3 = new Student(453726, "Tommy", "Computing");
         Student student4 = new Student(623456, "Peter", "Creative Media");
 
-        Department computing[] = new Department[10];
 
-        computing[0] = student1;
-        computing[1] = student3;
+        Department department1 = new Department("Computing",);
+        Department department2 = new Department("Creative Media",);
     }
 }

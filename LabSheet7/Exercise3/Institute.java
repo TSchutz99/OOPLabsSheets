@@ -1,4 +1,7 @@
 package LabSheet7.Exercise3;
+
+import java.util.Arrays;
+
 /* Institute.java
  * By: Faun Schutz
  * Start: 13/09/2020
@@ -21,7 +24,8 @@ public class Institute{
     }
 
     public void setDepartments(Department[] departments) {
-        this.departments = departments;
+        if(departments != null)
+            this.departments = Arrays.copyOf(departments,departments.length);
     }
     public Department[] getDepartments(){
         return departments;

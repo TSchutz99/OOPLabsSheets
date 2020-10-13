@@ -59,7 +59,7 @@ public class Animal {
 
 	public void setContinents (String continents[]) {    
 		//this.continents=continents; //potential breaking of encapsulation
-		if(continents!=null)
+		if(continents != null)
 			this.continents = Arrays.copyOf(continents,continents.length);
 	}
 	
