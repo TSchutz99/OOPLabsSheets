@@ -36,7 +36,7 @@ public class Product {
         }
 
         public String toString() {
-            return "Product details are as follows: id: " + id + "  name: " + name + "  description: " + description;
+            return "Product details are as follows: id: " + getId() + "  name: " + getName() + "  description: " + getDescription();
         }
 }
 

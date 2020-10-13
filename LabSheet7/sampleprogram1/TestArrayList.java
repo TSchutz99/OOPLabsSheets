@@ -27,16 +27,16 @@ public class TestArrayList {
         allLineItems[2] = item3;
 
         System.out.println("Displaying the state of all line-items ...\n\n");
-        for(int i=0;i<allLineItems.length;i++)
-            if(allLineItems[i]!=null)
+        for(int i = 0; i < allLineItems.length; i++)
+            if(allLineItems[i] != null)
                 System.out.println(allLineItems[i]);
 
         System.out.println("Now changing product associated with first line-item to a marker...\n\n");
         item1.setProduct(p4);
 
         System.out.println("Displaying the state of all line-items again...\n\n");
-        for(int i=0;i<allLineItems.length;i++)
-            if(allLineItems[i]!=null)
+        for(int i = 0; i < allLineItems.length; i++)
+            if(allLineItems[i] != null)
                 System.out.println(allLineItems[i]);
 
         System.out.println("Now destroying the second line item (the 4 pencils)...\n");
@@ -48,8 +48,8 @@ public class TestArrayList {
         System.out.println(p2); //and yet the Product associated with it still exists
 
         System.out.println("\nDisplaying the state of all line-items one last time...\n\n");
-        for(int i=0;i<allLineItems.length;i++)
-            if(allLineItems[i]!=null)
+        for(int i = 0; i < allLineItems.length; i++)
+            if(allLineItems[i] != null)
                 System.out.println(allLineItems[i]);
     }
 }
