@@ -1,5 +1,5 @@
 package LabSheet7.Exercise3;
-/* TestArrayList.java
+/* Students.java
  * By: Faun Schutz
  * Start: 13/09/2020
  * Finish: 13/09/2020
