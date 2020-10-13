@@ -32,6 +32,13 @@ public class Department {
     }
 
     public String toString(){
-        return "Name: " + getName() + "\nList of Students: \n\n" + getStudents();
+        String output = "";
+        output += "Name: " + getName() + "\nList of Students: \n\n" + getStudents();
+
+        for(int i = 0; i < getStudents().length; i++)
+            if(getStudents()[i] != null)
+                output += getStudents()[i] + "\n";
+
+        return output;
     }
 }

@@ -36,7 +36,15 @@ public class Institute{
     }
 
     public String toString(){
-        return "Name: " + getName() + "\n\nDepartments: \n" + getDepartments() +  
-               "\n\nTotal students in institute: " + getTotalStudents();
+        String output = "";
+        output += "Name: " + getName() + "\n\nDepartments: \n" + getDepartments();
+
+        for(int i = 0; i < getDepartments().length; i++)
+            if(getDepartments()[i] != null)
+                output += getDepartments()[i] + "\n";
+
+        output += "\n\nTotal students in institute: " + getTotalStudents();
+
+        return output;
     }
 }
