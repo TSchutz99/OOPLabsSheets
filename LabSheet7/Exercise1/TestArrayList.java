@@ -1,8 +1,8 @@
 package LabSheet7.Exercise1;
 /* TestArrayList.java
  * By: Faun Schutz
- * Start: 09/09/2020
- * Finish: 09/09/2020
+ * Start: 13/09/2020
+ * Finish: 13/09/2020
  *
  * A driver (test) class that contains the main() method for
  * testing the functionality of the LineItem and Product classes. */

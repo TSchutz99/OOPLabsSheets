@@ -1,8 +1,8 @@
 package LabSheet7.Exercise1;
 /* Product.java
  * By: Faun Schutz
- * Start: 09/09/2020
- * Finish: 09/09/2020
+ * Start: 13/09/2020
+ * Finish: 13/09/2020
  *
  * A simple instantiable class definition for a Product. */
 
