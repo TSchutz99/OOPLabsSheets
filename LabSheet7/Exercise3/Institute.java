@@ -7,4 +7,23 @@ package LabSheet7.Exercise3;
 public class Institute{
     private String name;
     private Department[] departments;
+
+    public Institute(String name, Department[] departments){
+        setName(name);
+        setDepartments(departments);
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return name;
+    }
+
+    public void setDepartments(Department[] departments) {
+        this.departments = departments;
+    }
+    public Department[] getDepartments(){
+        return departments;
+    }
 }
