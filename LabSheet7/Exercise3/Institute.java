@@ -26,4 +26,12 @@ public class Institute{
     public Department[] getDepartments(){
         return departments;
     }
+
+    public int getTotalStudents(){
+        return 0;
+    }
+
+    public String toString(){
+        return "Departments: \n" + getDepartments();
+    }
 }
