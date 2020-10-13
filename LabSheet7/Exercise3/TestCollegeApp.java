@@ -25,5 +25,9 @@ public class TestCollegeApp {
         Department[] departments = new Department[5];
         departments[0] = department1;
         departments[1] = department2;
+
+        Institute ITT = new Institute("Institute of Technology, Tralee", departments);
+
+        System.out.println(ITT);
     }
 }

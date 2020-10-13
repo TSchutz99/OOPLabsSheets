@@ -32,10 +32,11 @@ public class Institute{
     }
 
     public int getTotalStudents(){
-        return 0;
+        return 0; // Next job to do.
     }
 
     public String toString(){
-        return "Name: " + getName() + "\n\nDepartments: \n" + getDepartments();
+        return "Name: " + getName() + "\n\nDepartments: \n" + getDepartments() +  
+               "\n\nTotal students in institute: " + getTotalStudents();
     }
 }
