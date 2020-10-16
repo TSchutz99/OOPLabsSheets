@@ -19,12 +19,12 @@ public class TestCollegeApp {
         creativeMediaStudents[0] = student2;
         creativeMediaStudents[1] = student4;
 
-        Department department1 = new Department("Computing", computingStudents);
-        Department department2 = new Department("Creative Media", creativeMediaStudents);
+        Department computing = new Department("Computing", computingStudents);
+        Department creativeMedia = new Department("Creative Media", creativeMediaStudents);
 
         Department[] departments = new Department[5];
-        departments[0] = department1;
-        departments[1] = department2;
+        departments[0] = computing;
+        departments[1] = creativeMedia;
 
         Institute ITT = new Institute("Institute of Technology, Tralee", departments);
 

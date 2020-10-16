@@ -33,19 +33,15 @@ public class Institute{
 
     public int getTotalStudents(){
         int totalStudents = 0;
-
-        Department temporaryD = new Department;
+        Student[] temporaryS;
 
         for(int i = 0; i < getDepartments().length; i++){
             if (getDepartments()[i] != null){
-                temporaryD = getDepartments()[i];
+                temporaryS = getDepartments()[i].getStudents();
 
-                Student[] temporaryS = new Student[temporaryD[1].length];
-
-                temporaryS = temporaryD[1];
-
-                if(temporaryS[i] != null)
-                    totalStudents++;
+                for(int j = 0; j < temporaryS.length; j++)
+                    if(temporaryS[i] != null)
+                        totalStudents++;
             }
         }
         return totalStudents;
