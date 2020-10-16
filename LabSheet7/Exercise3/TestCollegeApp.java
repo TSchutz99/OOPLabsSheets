@@ -43,25 +43,25 @@ public class TestCollegeApp {
         }
 
         if(computingSubscript != -1 && creativeMediaSubscript != -1){
-            Student[] allDeptStudents = departments[computingSubscript].getStudents();
+            Student[] allDepartmentStudents = departments[computingSubscript].getStudents();
 
             int j;
-            for (j = 0; j < allDeptStudents.length; j++){
-                if(allDeptStudents[j] != null){
-                   if (allDeptStudents[j].getId() == 154345){
+            for (j = 0; j < allDepartmentStudents.length; j++){
+                if(allDepartmentStudents[j] != null){
+                   if (allDepartmentStudents[j].getId() == 154345){
                        System.out.println("\nFound Jake!\n");
 
-                       allDeptStudents[j].setDepartment("Creative Media");
+                       allDepartmentStudents[j].setDepartment("Creative Media");
 
-                       departments[creativeMediaSubscript].getStudents()[2] = allDeptStudents[j];
-                       allDeptStudents[j] = null;
+                       departments[creativeMediaSubscript].getStudents()[2] = allDepartmentStudents[j];
+                       allDepartmentStudents[j] = null;
 
                        break;
                    }
                 }
             }
 
-            if(j == allDeptStudents.length)
+            if(j == allDepartmentStudents.length)
                 System.out.println("\nCouldn't find Jake\n");
         }
         System.out.println(ITT);
