@@ -54,8 +54,10 @@ public class TestCollegeApp {
                        allDepartmentStudents[j].setDepartment("Creative Media");
 
                        for(int t = 0; t < departments[creativeMediaSubscript].getStudents().length; t++){
-                           if(departments[creativeMediaSubscript].getStudents()[t] == null)
-                                departments[creativeMediaSubscript].getStudents()[2] = allDepartmentStudents[j];
+                           if(departments[creativeMediaSubscript].getStudents()[t] == null){
+                               departments[creativeMediaSubscript].getStudents()[t] = allDepartmentStudents[j];
+                               break;
+                           }
                        }
                        allDepartmentStudents[j] = null;
 
