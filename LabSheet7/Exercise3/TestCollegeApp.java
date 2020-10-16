@@ -29,6 +29,42 @@ public class TestCollegeApp {
         Institute ITT = new Institute("Institute of Technology, Tralee", departments);
 
         System.out.println(ITT);
+        System.out.println("\n\nTotal students in institute: " + ITT.getTotalStudents());
+
+        // Switching Jakes Department
+
+        int computingSubscript = -1, creativeMediaSubscript = -1;
+
+        for(int i = 0; i < departments.length; i++){
+            if(departments[i] != null && departments[i].getName().equals("Computing"))
+                computingSubscript = i;
+            if(departments[i] != null && departments[i].getName().equals("Creative Media"))
+                creativeMediaSubscript = i;
+        }
+
+        if(computingSubscript != -1 && creativeMediaSubscript != -1){
+            Student[] allDeptStudents = departments[computingSubscript].getStudents();
+
+            int j;
+            for (j = 0; j < allDeptStudents.length; j++){
+                if(allDeptStudents[j] != null){
+                   if (allDeptStudents[j].getId() == 154345){
+                       System.out.println("\nFound Jake!\n");
+
+                       allDeptStudents[j].setDepartment("Creative Media");
+
+                       departments[creativeMediaSubscript].getStudents()[2] = allDeptStudents[j];
+                       allDeptStudents[j] = null;
+
+                       break;
+                   }
+                }
+            }
+
+            if(j == allDeptStudents.length)
+                System.out.println("\nCouldn't find Jake\n");
+        }
+        System.out.println(ITT);
 
         System.exit(0);
     }

@@ -52,10 +52,8 @@ public class Institute{
         output += "Name: " + getName() + "\n\nDepartments: \n" + getDepartments();
 
         for(int i = 0; i < getDepartments().length; i++)
-            if(getDepartments()[i] != null)
-                output += getDepartments()[i];
-
-        output += "\n\nTotal students in institute: " + getTotalStudents();
+            if(departments[i] != null)
+                output += departments[i];
 
         return output;
     }
