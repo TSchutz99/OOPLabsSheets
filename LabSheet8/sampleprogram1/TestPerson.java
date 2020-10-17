@@ -31,7 +31,6 @@ public class TestPerson
         Person person2 = new Person(name, address,birthDate);
         text += "\nValue of second person object is: " + person2;
 
-
         text += "\n\nCalling the Student() constructor .....";
         Student student1 = new Student();
 

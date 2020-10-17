@@ -5,7 +5,7 @@ package LabSheet8.sampleprogram1;
 
 import java.util.GregorianCalendar;
 
-public class Student extends Person {
+public class Student extends Person{
 
     private int id;
     private String dept;
