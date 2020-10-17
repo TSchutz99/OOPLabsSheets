@@ -33,7 +33,7 @@ public class Department {
 
     public String toString(){
         String output = "";
-        output += "\nName: " + getName() + "\nList of Students: \n\n" + getStudents();
+        output += "\nName: " + getName() + "\nList of Students: \n\n"; // + getStudents();
 
         for(int i = 0; i < getStudents().length; i++)
             if(getStudents()[i] != null)

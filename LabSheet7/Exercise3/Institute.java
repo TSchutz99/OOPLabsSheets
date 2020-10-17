@@ -49,7 +49,7 @@ public class Institute{
 
     public String toString(){
         String output = "";
-        output += "Name: " + getName() + "\n\nDepartments: \n" + getDepartments();
+        output += "Name: " + getName() + "\n\nDepartments: \n"; // + getDepartments();
 
         for(int i = 0; i < getDepartments().length; i++)
             if(departments[i] != null)
