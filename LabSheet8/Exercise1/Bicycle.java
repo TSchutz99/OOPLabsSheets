@@ -34,9 +34,9 @@ public class Bicycle extends Vehicle{
     public String toString(){
         String str = super.toString() + "\nHas bell: ";
 
-        if(baseBell == false)
+        if(getBaseBell() == false)
             str += "No";
-        if(baseBell == true)
+        if(getBaseBell() == true)
             str += "Yes";
 
         str += "\nGear Count: " + getGearCount();
