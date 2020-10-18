@@ -24,6 +24,6 @@ public class TestVehicle{
                                         "Raleigh", "Mountain bike", 4, true);
         text += bicycle2;
 
-        System.out.println(text);
+        System.out.println(text)
     }
 }
