@@ -36,7 +36,7 @@ public class Bicycle extends Vehicle{
 
         if(getBaseBell() == false)
             str += "No";
-        if(getBaseBell() == true)
+        else
             str += "Yes";
 
         str += "\nGear Count: " + getGearCount();

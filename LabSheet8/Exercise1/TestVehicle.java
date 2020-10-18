@@ -21,8 +21,8 @@ public class TestVehicle{
 
         text += "\n\n\nTesting the Bicycle multi-arg constructor:\n\n";
         Bicycle bicycle2 = new Bicycle(500.0, 1.5, 1.0, 50.0,
-                                        "Raleigh", "Mountainbike", 4, true);
-        text += bicycle1;
+                                        "Raleigh", "Mountain bike", 4, true);
+        text += bicycle2;
 
         System.out.println(text);
     }
