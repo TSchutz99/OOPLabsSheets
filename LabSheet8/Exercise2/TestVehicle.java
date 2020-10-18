@@ -16,6 +16,11 @@ public class TestVehicle{
                             "Ferrari", "F2", 2, "05KY1");
         text += car2;
 
+        text += "\n\n\nTesting the Car multi-arg constructor:\n\n";
+        Car car3 = new Car(100000.0, 4.5, 1.25, 2000.0,
+                "Ferrari", "F2", 2, "99-FS-213674");
+        text += car3;
+
         text += "\n\n\nTesting the Bicycle no-arg constructor:\n\n";
         Bicycle bicycle1 = new Bicycle();
         text += bicycle1;
