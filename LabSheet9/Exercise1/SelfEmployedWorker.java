@@ -6,13 +6,18 @@ package LabSheet9.Exercise1;
  */
 
 public class SelfEmployedWorker extends Employee{
+    private double estimatedIncome;
 
     public SelfEmployedWorker(String firstName, String lastName){
         super(firstName, lastName);
+        setEstimatedIncome();
     }
 
+    public void setEstimatedIncome() {
+        this.estimatedIncome = (int)(Math.random() * 501) + 400;
+    }
     public double earnings() {
-        return (int)(Math.random() * 501) + 400;
+        return estimatedIncome;
     }
 
     public String toString() {
