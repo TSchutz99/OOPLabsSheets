@@ -40,7 +40,7 @@ public class Ellipse extends Shape{
         return 2 * Math.PI * Math.sqrt(Math.pow(getMajorAxis(),2) + Math.pow(getMinorAxis(),2)/ 2);
     }
 
-    public String tpString(){
+    public String toString(){
         return "Shape type: " + type + "\nArea: " + area() + "\nPerimeter: " + perimeter();
     }
 }

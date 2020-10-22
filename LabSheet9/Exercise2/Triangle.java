@@ -50,7 +50,7 @@ public class Triangle extends Shape{
         return getSideLength1() + getSideLength2() + getSideLength3();
     }
 
-    public String tpString(){
+    public String toString(){
         return "Shape type: " + type + "\nArea: " + area() + "\nPerimeter: " + perimeter();
     }
 }
