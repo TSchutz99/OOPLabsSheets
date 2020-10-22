@@ -43,7 +43,7 @@ public class Triangle extends Shape{
     }
 
     public double area(){
-        double s = (getSideLength1()*getSideLength2()*getSideLength3())/2;
+        float s = (float) ((getSideLength1() + getSideLength2() + getSideLength3()) / 2);
         return Math.sqrt(s * (s - getSideLength1()) * (s - getSideLength2()) * (s - getSideLength3()));
     }
     public double perimeter(){
