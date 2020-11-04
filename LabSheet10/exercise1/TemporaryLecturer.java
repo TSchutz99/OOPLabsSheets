@@ -1,5 +1,7 @@
 package LabSheet10.exercise1;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.GregorianCalendar;
 
 /* TemporaryLecturer.java
@@ -25,7 +27,21 @@ public class TemporaryLecturer extends Lecturer{
         return "Contracted temporary lecturer on part-time hours";
     }
     public int getPointOnScale(){
-        return 0;
+        Date currentDate = new Date();
+        SimpleDateFormat formatDate = new SimpleDateFormat("dd-MM-yyyy");
+
+        String strDateApp = formatDate.format(getDateOfAppointment().getTime());
+
+        int year1 = Integer.parseInt(strDateApp.substring(6));
+        int year2 = Integer.parseInt(formatDate.format(currentDate).substring(6));
+        int yearsBetween = year2 - year1 - 1;
+
+        if(yearsBetween >= 3 && getHoursWorked() > 1500)
+            return 4;
+        else if(yearsBetween >= 3 && getHoursWorked() > 1000){
+            return (int)((getHoursWorked() * 1.33) / 700) + 1;
+        }
+        else return yearsBetween;
     }
 
     public String toString(){
