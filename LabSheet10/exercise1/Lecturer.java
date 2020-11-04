@@ -67,9 +67,9 @@ public abstract class Lecturer implements Person{
     public abstract int getPointOnScale();
 
     public String toString(){
-        String str = "Lecturer name is " + getName() +
-                     "\nLecturer address is " + getAddress() +
-                     "\nLecturer date of birth is ";
+        String str = "Lecturer name: " + getName() +
+                     "\nLecturer address: " + getAddress() +
+                     "\nLecturer date of birth: ";
 
         if(dateOfBirth != null){
             Date dob = getDateOfBirth().getTime();
@@ -81,9 +81,9 @@ public abstract class Lecturer implements Person{
         else
             str += "Undefined"; //Not adding onto the Sting for some reason
 
-        str += "\nLecturer staff ID is " + getStaffID() +
-               "\nLecturer courses taught " + getCoursesTaught() +
-               "\nLecturer date of appointment ";
+        str += "\nLecturer staff ID: " + getStaffID() +
+               "\nLecturer courses taught: " + getCoursesTaught() +
+               "\nLecturer date of appointment: ";
 
         if(dateOfAppointment != null){
             Date doa = getDateOfAppointment().getTime();
@@ -95,8 +95,8 @@ public abstract class Lecturer implements Person{
         else
             str += "Undefined"; //Not adding onto the Sting for some reason
 
-        str += "\nLecturer status is " + getStatus() +
-               "\nLecturer point on scale is " + getPointOnScale();
+        str += "\nLecturer status: " + getStatus() +
+               "\nLecturer point on scale: " + getPointOnScale();
         return str;
     }
 }
