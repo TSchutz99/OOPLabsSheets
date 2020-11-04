@@ -27,4 +27,8 @@ public class TemporaryLecturer extends Lecturer{
     public int getPointOnScale(){
         return 0;
     }
+
+    public String toString(){
+        return super.toString() + "\nLecturer Hours Worked: " + getHoursWorked();
+    }
 }
