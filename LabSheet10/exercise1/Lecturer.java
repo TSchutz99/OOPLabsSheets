@@ -75,10 +75,10 @@ public abstract class Lecturer implements Person{
 
             SimpleDateFormat formatDate = new SimpleDateFormat("dd-MM-yyyy");
             String strDob = formatDate.format(dob);
-            str += strDob;
+            str += strDob; //Not adding onto the Sting for some reason
         }
         else
-            str += "Undefined";
+            str += "Undefined"; //Not adding onto the Sting for some reason
 
         str = "\nLecturer staff ID is " + getStaffID() +
               "\nLecturer course taught " + getCoursesTaught() +
@@ -89,10 +89,10 @@ public abstract class Lecturer implements Person{
 
             SimpleDateFormat formatDate = new SimpleDateFormat("dd-MM-yyyy");
             String strDoa = formatDate.format(doa);
-            str += strDoa;
+            str += strDoa; //Not adding onto the Sting for some reason
         }
         else
-            str += "Undefined";
+            str += "Undefined"; //Not adding onto the Sting for some reason
 
         str = "\nLecturer status is " + getStatus() +
               "\nLecturer point on scale is " + getPointOnScale();
