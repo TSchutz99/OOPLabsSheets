@@ -82,7 +82,7 @@ public abstract class Lecturer implements Person{
             str += "Undefined"; //Not adding onto the Sting for some reason
 
         str += "\nLecturer staff ID is " + getStaffID() +
-               "\nLecturer course taught " + getCoursesTaught() +
+               "\nLecturer courses taught " + getCoursesTaught() +
                "\nLecturer date of appointment ";
 
         if(dateOfAppointment != null){
