@@ -1,6 +1,7 @@
 package LabSheet10.exercise1;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -53,8 +54,8 @@ public abstract class Lecturer implements Person{
     public void setCoursesTaught(String[] courseTaught) {
         this.courseTaught = courseTaught;
     }
-    public String[] getCoursesTaught() {
-        return courseTaught;
+    public String getCoursesTaught() {
+        return Arrays.toString(courseTaught);
     }
     public void setDateOfAppointment(GregorianCalendar dateOfAppointment) {
         this.dateOfAppointment = dateOfAppointment;
@@ -80,9 +81,9 @@ public abstract class Lecturer implements Person{
         else
             str += "Undefined"; //Not adding onto the Sting for some reason
 
-        str = "\nLecturer staff ID is " + getStaffID() +
-              "\nLecturer course taught " + getCoursesTaught() +
-              "\nLecturer date of appointment ";
+        str += "\nLecturer staff ID is " + getStaffID() +
+               "\nLecturer course taught " + getCoursesTaught() +
+               "\nLecturer date of appointment ";
 
         if(dateOfAppointment != null){
             Date doa = getDateOfAppointment().getTime();
@@ -94,8 +95,8 @@ public abstract class Lecturer implements Person{
         else
             str += "Undefined"; //Not adding onto the Sting for some reason
 
-        str = "\nLecturer status is " + getStatus() +
-              "\nLecturer point on scale is " + getPointOnScale();
+        str += "\nLecturer status is " + getStatus() +
+               "\nLecturer point on scale is " + getPointOnScale();
         return str;
     }
 }

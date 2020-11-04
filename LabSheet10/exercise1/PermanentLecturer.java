@@ -45,6 +45,20 @@ public class PermanentLecturer extends Lecturer{
             yearsBetween = 20;
 
         return yearsBetween;
+        /* The way John B did this got it after completing my own
+        Calendar today = GregorianCalendar.getInstance();
+        int yearsWorked =  today.get(Calendar.YEAR)-getDateOfAppointment().get(Calendar.YEAR);
+
+        if(today.get(Calendar.MONTH)<getDateOfAppointment().get(Calendar.MONTH)
+            || (today.get(Calendar.MONTH)==getDateOfAppointment().get(Calendar.MONTH)
+                && today.get(Calendar.DATE)<getDateOfAppointment().get(Calendar.DATE)))
+            yearsWorked--;
+
+        if(yearsWorked>=20) //we will say there are only 20 points on the scale in total here
+            return 20;
+        else
+            return yearsWorked;
+        */
     }
 
     public String toString(){
