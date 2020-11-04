@@ -7,7 +7,7 @@ import java.util.GregorianCalendar;
 /* Lecturer.java
  * By: Faun Schutz
  * Start: 03/11/2020
- * Finished: /11/2020
+ * Finished: 04/11/2020
  */
 public abstract class Lecturer implements Person{
     String name;
@@ -22,7 +22,7 @@ public abstract class Lecturer implements Person{
         setAddress(address);
         setDateOfBirth(dateOfBirth);
         setStaffID(staffID);
-        setCourseTaught(courseTaught);
+        setCoursesTaught(courseTaught);
         setDateOfAppointment(dateOfAppointment);
     }
 
@@ -50,10 +50,10 @@ public abstract class Lecturer implements Person{
     public String getStaffID() {
         return staffID;
     }
-    public void setCourseTaught(String[] courseTaught) {
+    public void setCoursesTaught(String[] courseTaught) {
         this.courseTaught = courseTaught;
     }
-    public String[] getCourseTaught() {
+    public String[] getCoursesTaught() {
         return courseTaught;
     }
     public void setDateOfAppointment(GregorianCalendar dateOfAppointment) {
@@ -81,7 +81,7 @@ public abstract class Lecturer implements Person{
             str += "Undefined";
 
         str = "\nLecturer staff ID is " + getStaffID() +
-              "\nLecturer course taught " + getCourseTaught() +
+              "\nLecturer course taught " + getCoursesTaught() +
               "\nLecturer date of appointment ";
 
         if(dateOfAppointment != null){
