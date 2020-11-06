@@ -86,7 +86,27 @@ public class TestArrayList{
         int productID = Integer.parseInt(JOptionPane.showInputDialog("The following products matched your search phrase\n\n" + listOfProducts +
                                                                      "\n\nEnter the id of the one you want to amend"));
 
-        JOptionPane.showInputDialog("The details of the product you ish to amend is:\n");
+        int choice = Integer.parseInt(JOptionPane.showInputDialog("The details of the product you wish to amend is:\n\n" + allProducts.get(productID - 1) +
+                                                                  "\n\n1. Amend Name\n2. Amend Description\n3. Cancel Amend" +
+                                                                  "\n\nPlease enter your choice"));
+        while(choice < 1 && choice > 3){
+            choice = Integer.parseInt(JOptionPane.showInputDialog("The details of the product you wish to amend is:\n\n" + allProducts.get(productID - 1) +
+                                                                  "\n\n1. Amend Name\n2. Amend Description\n3. Cancel Amend" +
+                                                                  "\n\nInvalid choice entered!! Must be a value between 1 and 3 inclusive"));
+        }
+
+        if(choice == 1){
+            String newName = JOptionPane.showInputDialog("Please enter the new Name for the product");
+            allProducts.get(productID - 1).setName(newName);
+            JOptionPane.showMessageDialog(null, "Product details now amended!", "Product Amended",
+                                            JOptionPane.INFORMATION_MESSAGE);
+        }
+        if(choice == 2){
+            String newDesc = JOptionPane.showInputDialog("Please enter the new description for the product");
+            allProducts.get(productID - 1).setDescription(newDesc);
+            JOptionPane.showMessageDialog(null, "Product details now amended!", "Product Amended",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
     }
     public static void removeProduct(ArrayList<Product> allProducts){
         // To be done.
