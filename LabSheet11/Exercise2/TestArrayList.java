@@ -3,7 +3,7 @@ package LabSheet11.Exercise2;
 /* TestArrayList.java
  * By: Faun Schutz
  * Start: 06/11/2020
- * Finish: /11/2020
+ * Finish: 06/11/2020
  */
 
 import javax.swing.*;
