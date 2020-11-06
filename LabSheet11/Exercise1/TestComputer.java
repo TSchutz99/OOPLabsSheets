@@ -28,21 +28,23 @@ public class TestComputer {
         Computer[] computerTablet = new Computer[allComputers.length];
 
         System.out.println("\n\nDetails of all Computers in the array\n");
+
+        int j = 0;
         for (Computer c:allComputers) {
-            int i = 0;
+
             totalPrice += c.getPrice();
 
             if(c.getSpeed() > highestSpeedComputer.getSpeed())
                 highestSpeedComputer = c;
 
             if(c.getPrice() > 500)
-                computer500[i] = c;
+                computer500[j] = c;
 
             if(c.getType().equals("Tablet"))
-                computerTablet[i] = c;
+                computerTablet[j] = c;
 
             System.out.println(c);
-            i++;
+            j++;
         }
 
         System.out.println("\n\nSome additional information" +
