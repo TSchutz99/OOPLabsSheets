@@ -9,6 +9,7 @@ package LabSheet11.Exercise2;
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 
 public class TestArrayList{
     public static void main(String[] args) {
@@ -40,7 +41,7 @@ public class TestArrayList{
                     "\n5. Quit" +
                     "\n\nPlease enter your choice"));
 
-            while (choice < 1 && choice > 5) {
+            while(choice < 1 || choice > 5) {
                 choice = Integer.parseInt(JOptionPane.showInputDialog("1. Add a Product" +
                         "\n2. Amend a Product" +
                         "\n3. Remove a Product" +
@@ -89,7 +90,8 @@ public class TestArrayList{
         int choice = Integer.parseInt(JOptionPane.showInputDialog("The details of the product you wish to amend is:\n\n" + allProducts.get(productID - 1) +
                                                                   "\n\n1. Amend Name\n2. Amend Description\n3. Cancel Amend" +
                                                                   "\n\nPlease enter your choice"));
-        while(choice < 1 && choice > 3){
+
+        while(choice < 1 || choice > 3){
             choice = Integer.parseInt(JOptionPane.showInputDialog("The details of the product you wish to amend is:\n\n" + allProducts.get(productID - 1) +
                                                                   "\n\n1. Amend Name\n2. Amend Description\n3. Cancel Amend" +
                                                                   "\n\nInvalid choice entered!! Must be a value between 1 and 3 inclusive"));
@@ -109,7 +111,35 @@ public class TestArrayList{
         }
     }
     public static void removeProduct(ArrayList<Product> allProducts){
-        // To be done.
+        String removeSearch = JOptionPane.showInputDialog("Please enter the name of the product you wish to remove");
+        String listOfProducts = "";
+
+        for(Product p : allProducts)
+            if(p != null && p.getName().contains(removeSearch))
+                listOfProducts += p + "\n";
+
+        int productID = Integer.parseInt(JOptionPane.showInputDialog("The following products matched your search phrase\n\n" + listOfProducts +
+                "\n\nEnter the id of the one you want to remove"));
+
+        int choice = JOptionPane.showConfirmDialog(null,"The details of the product you wish to remove are:\n\n" + allProducts.get(productID - 1) +
+                                                                    "\n\nAre you sure you wish to remove this product?", "Product Removal Confirmation",
+                                                                    JOptionPane.YES_NO_CANCEL_OPTION);
+
+        if(choice == JOptionPane.YES_OPTION){
+            Iterator<Product> iterator = allProducts.iterator();
+
+            while (iterator.hasNext()) {
+                Product p = iterator.next();
+
+                if(p != null && p.getId() == productID)
+                    iterator.remove();
+            }
+            JOptionPane.showMessageDialog(null, "Product now removed from array list", "Product Removed", JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        if(choice == 1 || choice == 2){
+            JOptionPane.showMessageDialog(null, "Product removal cancelled", "Product Not Removed", JOptionPane.INFORMATION_MESSAGE);
+        }
     }
     public static void viewProducts(ArrayList<Product> allProducts){
         String ouput = "";
