@@ -82,7 +82,7 @@ public class TestArrayList{
 
         for(Product p : allProducts)
             if(p != null && p.getName().contains(amendSearch))
-                listOfProducts += p + "\n";
+                listOfProducts += p + "\n";  // Appears not to be adding on for some reason
 
         int productID = Integer.parseInt(JOptionPane.showInputDialog("The following products matched your search phrase\n\n" + listOfProducts +
                                                                      "\n\nEnter the id of the one you want to amend"));
@@ -116,7 +116,7 @@ public class TestArrayList{
 
         for(Product p : allProducts)
             if(p != null && p.getName().contains(removeSearch))
-                listOfProducts += p + "\n";
+                listOfProducts += p + "\n";  // Appears not to be adding on for some reason
 
         int productID = Integer.parseInt(JOptionPane.showInputDialog("The following products matched your search phrase\n\n" + listOfProducts +
                 "\n\nEnter the id of the one you want to remove"));
