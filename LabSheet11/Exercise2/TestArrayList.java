@@ -1,4 +1,4 @@
-package LabSheet11.sampleprogram2;
+package LabSheet11.Exercise2;
 
 //TestArrayList.java
 /*A driver (test) class that contains the main() method for
@@ -9,7 +9,6 @@ the functionality of the ArrayList class*/
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 
 public class TestArrayList{
     public static void main(String[] args) {
