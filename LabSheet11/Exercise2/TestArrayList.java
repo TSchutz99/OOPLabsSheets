@@ -4,17 +4,11 @@ package LabSheet11.Exercise2;
  * By: Faun Schutz
  * Start: 06/11/2020
  * Finish: /11/2020
- *
- * A driver (test) class that contains the main() method for
- * testing the functionality of the LineItem and Product classes but this time
- * an array-list is used for maintaining a collection of LineItem objects and
- * a separate collection of Product objects. The driver is also testing out
- * the functionality of the ArrayList class*/
+ */
 
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
 
 public class TestArrayList{
     public static void main(String[] args) {
@@ -82,13 +76,29 @@ public class TestArrayList{
                                         JOptionPane.INFORMATION_MESSAGE);
     }
     public static void amendProduct(ArrayList<Product> allProducts){
+        String amendSearch = JOptionPane.showInputDialog("Please enter the name of the product you wish to amend");
+        String listOfProducts = "";
 
+        for(Product p : allProducts)
+            if(p != null && p.getName().contains(amendSearch))
+                listOfProducts += p + "\n";
+
+        int productID = Integer.parseInt(JOptionPane.showInputDialog("The following products matched your search phrase\n\n" + listOfProducts +
+                                                                     "\n\nEnter the id of the one you want to amend"));
+
+        JOptionPane.showInputDialog("The details of the product you ish to amend is:\n");
     }
     public static void removeProduct(ArrayList<Product> allProducts){
-
+        // To be done.
     }
     public static void viewProducts(ArrayList<Product> allProducts){
+        String ouput = "";
 
+        for(Product p : allProducts)
+            if (p != null)
+                ouput += p + "\n";
+
+        JOptionPane.showMessageDialog(null, ouput, "List of all Products", JOptionPane.INFORMATION_MESSAGE);
     }
 
 }
