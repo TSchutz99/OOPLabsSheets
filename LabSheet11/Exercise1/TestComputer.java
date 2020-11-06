@@ -67,7 +67,7 @@ public class TestComputer {
                 c.setManufacturer("Dell");
         }
 
-        System.out.println("Updated details of all computers in the array:\n\n");
+        System.out.println("\nUpdated details of all computers in the array:\n");
 
         for(int i = 0; i < allComputers.length; i++)
             System.out.println(allComputers[i]);
