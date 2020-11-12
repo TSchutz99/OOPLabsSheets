@@ -8,9 +8,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
 
 public class GridLayoutMouseEvent extends JFrame implements MouseListener {
-    private JLabel jlabels[];
+    //private JLabel jlabels;
+    private ArrayList<JLabel> jlabels;
     private int clickEventCounter;
     private int result=-1;
     private boolean gameOver=false;
@@ -25,13 +27,13 @@ public class GridLayoutMouseEvent extends JFrame implements MouseListener {
         GridLayout layout = new GridLayout(4, 4, 0,0);
         setLayout(layout);
 
-        jlabels = new JLabel[9];
+        jlabels = new ArrayList<JLabel>();
 
-        for (int i = 0; i < jlabels.length; i++) {
-            jlabels[i] = new JLabel(""+ (i+1),SwingConstants.CENTER);
-            jlabels[i].setBorder(BorderFactory.createEtchedBorder(Color.GREEN, Color.RED));
-            add(jlabels[i]);
-            jlabels[i].addMouseListener(this);
+        for (int i = 0; i < jlabels.size(); i++) {
+            jlabels.add(new JLabel(""+ (i+1),SwingConstants.CENTER));
+            jlabels.get(i).setBorder(BorderFactory.createEtchedBorder(Color.GREEN, Color.RED));
+            add(jlabels.get(i));
+            jlabels.get(i).addMouseListener(this);
         }
 
         setSize(500, 400);
@@ -62,8 +64,6 @@ public class GridLayoutMouseEvent extends JFrame implements MouseListener {
             clickEventCounter--;
         }
 
-
-
         if(clickEventCounter>=5&&clickEventCounter<=9) {
             result = checkForWinner();
 
@@ -89,33 +89,22 @@ public class GridLayoutMouseEvent extends JFrame implements MouseListener {
              /*I have omitted about 6/7 lines of code here which reset the game back to its original state
              so the user can play again. This is for an exercise that follows this */
          }
-
-
     }
-
-
     public void mousePressed(MouseEvent e) {
         System.out.println("Mouse was pressed");
     }
-
-
     public void mouseReleased(MouseEvent e) {
         System.out.println("Mouse was released");
     }
-
-
     public void mouseEntered(MouseEvent e) {
         JLabel label = (JLabel) e.getSource();
         label.setOpaque(true);
-        label.setBackground(Color.ORANGE);
+        label.setBackground(Color.CYAN);
     }
-
-
     public void mouseExited(MouseEvent e) {
         JLabel label = (JLabel) e.getSource();
         label.setBackground(defaultColour);
     }
-
     public int checkForWinner(){
         /*I have omitted about 50 lines of code here which check to see whether
         there was a winner and returns the winner. Returning 1 means player 1 wins,
