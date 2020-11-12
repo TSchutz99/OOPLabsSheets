@@ -34,6 +34,7 @@ public class BorderLayoutWindowEvent extends JFrame{
 
         addWindowListener(new WindowEventHandler());
         setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         setVisible(true);
     }
