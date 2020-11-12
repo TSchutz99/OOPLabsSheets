@@ -22,19 +22,19 @@ public class GridLayoutMouseEvent extends JFrame implements MouseListener {
     public GridLayoutMouseEvent() {
         super("Demonstrating GridLayout & MouseEvent");
 
-        GridLayout layout = new GridLayout(3, 3, 0,0);
+        GridLayout layout = new GridLayout(4, 4, 0,0);
         setLayout(layout);
 
         jlabels = new JLabel[9];
 
         for (int i = 0; i < jlabels.length; i++) {
             jlabels[i] = new JLabel(""+ (i+1),SwingConstants.CENTER);
-            jlabels[i].setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));
+            jlabels[i].setBorder(BorderFactory.createEtchedBorder(Color.GREEN, Color.RED));
             add(jlabels[i]);
             jlabels[i].addMouseListener(this);
         }
 
-        setSize(400, 300);
+        setSize(500, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         setVisible(true);
