@@ -9,11 +9,11 @@ import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
-public class BorderLayoutWindowEvent extends JFrame implements WindowListener{
+public class TestAnonymous extends JFrame implements WindowListener{
 
     private JButton jb[];
 
-    public BorderLayoutWindowEvent() {
+    public TestAnonymous() {
         super("Demonstrating BorderLayout & WindowEvent");
 
         BorderLayout layout = new BorderLayout(6, 8);
@@ -36,7 +36,7 @@ public class BorderLayoutWindowEvent extends JFrame implements WindowListener{
     }
 
     public static void main(String args[]) {
-        BorderLayoutWindowEvent b = new BorderLayoutWindowEvent();
+        TestAnonymous b = new TestAnonymous();
     }
 
     public void windowOpened(WindowEvent e) {
