@@ -9,7 +9,6 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class GridLayoutMouseEvent extends JFrame implements MouseListener {
-
     private JLabel jlabels[];
     private int clickEventCounter;
     private int result=-1;
@@ -40,11 +39,9 @@ public class GridLayoutMouseEvent extends JFrame implements MouseListener {
         setVisible(true);
     }
 
-
     public static void main(String args[]) {
         GridLayoutMouseEvent b = new GridLayoutMouseEvent();
     }
-
 
     public void mouseClicked(MouseEvent e) {
         clickEventCounter++;
