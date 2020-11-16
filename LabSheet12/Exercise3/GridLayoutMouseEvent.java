@@ -1,9 +1,9 @@
-package LabSheet12.Exercise2;
+package LabSheet12.Exercise3;
 
 /* GridLayoutMouseEvent.java
  * By: Faun Schutz
- * Start: 12/11/2020
- * Finish: 12/11/2020
+ * Start: 10/11/2020
+ * Finish: 10/11/2020
  *
  * This program shows how the GridLayout layout manager and mouse-events
  * operate*/
@@ -12,7 +12,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 public class GridLayoutMouseEvent extends JFrame{
