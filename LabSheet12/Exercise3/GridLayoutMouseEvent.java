@@ -90,8 +90,10 @@ public class GridLayoutMouseEvent extends JFrame implements MouseListener {
              JOptionPane.showMessageDialog(null, "Game Over", "Game Over!!",
                      JOptionPane.INFORMATION_MESSAGE);
 
-             /*I have omitted about 6/7 lines of code here which reset the game back to its original state
-             so the user can play again. This is for an exercise that follows this */
+             for(int i = 0; i < jlabels.length; i++){
+                 jlabels[i].setIcon(null);
+                 jlabels[i].setText(""+ (i+1));
+             }
          }
 
 
