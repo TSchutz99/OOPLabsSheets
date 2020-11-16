@@ -10,7 +10,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
-public class GridLayoutMouseEvent extends JFrame implements MouseListener {
+public class GridLayoutMouseEvent extends JFrame{
     //private JLabel jlabels;
     private ArrayList<JLabel> jlabels;
     private int clickEventCounter;
@@ -28,12 +28,75 @@ public class GridLayoutMouseEvent extends JFrame implements MouseListener {
         setLayout(layout);
 
         jlabels = new ArrayList<JLabel>();
+        JLabel currentLabel;
 
-        for (int i = 0; i < jlabels.size(); i++) {
-            jlabels.add(new JLabel(""+ (i+1),SwingConstants.CENTER));
-            jlabels.get(i).setBorder(BorderFactory.createEtchedBorder(Color.GREEN, Color.RED));
-            add(jlabels.get(i));
-            jlabels.get(i).addMouseListener(this);
+        for (int i = 0; i < 16; i++) {
+            currentLabel = new JLabel("" + (i+1),SwingConstants.CENTER);
+            jlabels.add(currentLabel);
+            currentLabel.setBorder(BorderFactory.createEtchedBorder(Color.GREEN, Color.RED));
+            add(currentLabel);
+            currentLabel.addMouseListener(new MouseListener() {
+                public void mouseClicked(MouseEvent e) {
+                     clickEventCounter++;
+
+                     JLabel label = (JLabel) e.getSource();
+
+                     if(!label.getText().equals("")){
+                         label.setText("");
+                         if(clickEventCounter%2==1)
+                             label.setIcon(xImage);
+                         else
+                             label.setIcon(oImage);
+                     }
+
+                     else {
+                         JOptionPane.showMessageDialog(null, "This cell has already been clicked!", "Error!!",
+                                 JOptionPane.ERROR_MESSAGE);
+                         clickEventCounter--;
+                     }
+
+                     if(clickEventCounter>=5&&clickEventCounter<=9) {
+                         result = checkForWinner();
+
+                         if (result == 1)
+                             JOptionPane.showMessageDialog(null, "Player 1 wins!", "Player 1 wins!!",
+                                     JOptionPane.INFORMATION_MESSAGE);
+                         else if (result == 2)
+                             JOptionPane.showMessageDialog(null, "Player 2 wins!", "Player 2 wins!!",
+                                     JOptionPane.INFORMATION_MESSAGE);
+                     }
+
+                     if(clickEventCounter==9 && result==0) {
+                         JOptionPane.showMessageDialog(null, "Neither player wins!", "A Tie!!",
+                                 JOptionPane.INFORMATION_MESSAGE);
+
+                         gameOver = true;
+                     }
+
+                     if(result==1 || result==2 || (result==0 && gameOver)) {
+                         JOptionPane.showMessageDialog(null, "Game Over", "Game Over!!",
+                                 JOptionPane.INFORMATION_MESSAGE);
+
+                         /*I have omitted about 6/7 lines of code here which reset the game back to its original state
+                         so the user can play again. This is for an exercise that follows this */
+                     }
+                }
+                public void mousePressed(MouseEvent e) {
+                    System.out.println("Mouse was pressed");
+                }
+                public void mouseReleased(MouseEvent e) {
+                    System.out.println("Mouse was released");
+                }
+                public void mouseEntered(MouseEvent e) {
+                    JLabel label = (JLabel) e.getSource();
+                    label.setOpaque(true);
+                    label.setBackground(Color.CYAN);
+                }
+                public void mouseExited(MouseEvent e) {
+                    JLabel label = (JLabel) e.getSource();
+                    label.setBackground(defaultColour);
+                }
+            });
         }
 
         setSize(500, 400);
@@ -46,65 +109,6 @@ public class GridLayoutMouseEvent extends JFrame implements MouseListener {
         GridLayoutMouseEvent b = new GridLayoutMouseEvent();
     }
 
-    public void mouseClicked(MouseEvent e) {
-        clickEventCounter++;
-
-        JLabel label = (JLabel) e.getSource();
-
-        if(!label.getText().equals("")){
-            label.setText("");
-            if(clickEventCounter%2==1)
-                label.setIcon(xImage);
-            else
-                label.setIcon(oImage);
-        }
-        else {
-            JOptionPane.showMessageDialog(null, "This cell has already been clicked!", "Error!!",
-                    JOptionPane.ERROR_MESSAGE);
-            clickEventCounter--;
-        }
-
-        if(clickEventCounter>=5&&clickEventCounter<=9) {
-            result = checkForWinner();
-
-            if (result == 1)
-                JOptionPane.showMessageDialog(null, "Player 1 wins!", "Player 1 wins!!",
-                        JOptionPane.INFORMATION_MESSAGE);
-            else if (result == 2)
-                JOptionPane.showMessageDialog(null, "Player 2 wins!", "Player 2 wins!!",
-                        JOptionPane.INFORMATION_MESSAGE);
-        }
-
-        if(clickEventCounter==9 && result==0) {
-            JOptionPane.showMessageDialog(null, "Neither player wins!", "A Tie!!",
-                           JOptionPane.INFORMATION_MESSAGE);
-
-            gameOver = true;
-        }
-
-         if(result==1 || result==2 || (result==0 && gameOver)) {
-             JOptionPane.showMessageDialog(null, "Game Over", "Game Over!!",
-                     JOptionPane.INFORMATION_MESSAGE);
-
-             /*I have omitted about 6/7 lines of code here which reset the game back to its original state
-             so the user can play again. This is for an exercise that follows this */
-         }
-    }
-    public void mousePressed(MouseEvent e) {
-        System.out.println("Mouse was pressed");
-    }
-    public void mouseReleased(MouseEvent e) {
-        System.out.println("Mouse was released");
-    }
-    public void mouseEntered(MouseEvent e) {
-        JLabel label = (JLabel) e.getSource();
-        label.setOpaque(true);
-        label.setBackground(Color.CYAN);
-    }
-    public void mouseExited(MouseEvent e) {
-        JLabel label = (JLabel) e.getSource();
-        label.setBackground(defaultColour);
-    }
     public int checkForWinner(){
         /*I have omitted about 50 lines of code here which check to see whether
         there was a winner and returns the winner. Returning 1 means player 1 wins,
