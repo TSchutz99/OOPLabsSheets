@@ -2,8 +2,8 @@ package LabSheet12.Exercise3;
 
 /* GridLayoutMouseEvent.java
  * By: Faun Schutz
- * Start: 10/11/2020
- * Finish: 10/11/2020
+ * Start: 13/11/2020
+ * Finish: 13/11/2020
  *
  * This program shows how the GridLayout layout manager and mouse-events
  * operate*/
