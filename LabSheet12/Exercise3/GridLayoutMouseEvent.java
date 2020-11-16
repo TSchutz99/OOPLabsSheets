@@ -94,28 +94,24 @@ public class GridLayoutMouseEvent extends JFrame implements MouseListener {
                  jlabels[i].setIcon(null);
                  jlabels[i].setText(""+ (i+1));
              }
+             gameOver = false;
+             clickEventCounter = 0;
+             result = -1;
          }
 
 
     }
-
-
     public void mousePressed(MouseEvent e) {
         System.out.println("Mouse was pressed");
     }
-
-
     public void mouseReleased(MouseEvent e) {
         System.out.println("Mouse was released");
     }
-
-
     public void mouseEntered(MouseEvent e) {
         JLabel label = (JLabel) e.getSource();
         label.setOpaque(true);
         label.setBackground(Color.ORANGE);
     }
-
 
     public void mouseExited(MouseEvent e) {
         JLabel label = (JLabel) e.getSource();
@@ -123,10 +119,45 @@ public class GridLayoutMouseEvent extends JFrame implements MouseListener {
     }
 
     public int checkForWinner(){
-        /*I have omitted about 50 lines of code here which check to see whether
-        there was a winner and returns the winner. Returning 1 means player 1 wins,
-        returning 2 means player 2 wins and returning 0 means neither player wins.
-        This is for an exercise that follows this sample program*/
+        for(int i = 0; i < 9; i += 3){
+            Icon labelA = jlabels[i].getIcon(), labelB = jlabels[i+1].getIcon(), labelC = jlabels[i+2].getIcon();
+
+            if(labelA == null || labelB == null || labelC == null) {
+                //continue on to the next iteration of the loop
+            }
+            else if(labelA.equals(xImage) && labelB.equals(xImage) && labelC.equals(xImage))
+                return 1;
+            else if(labelA.equals(oImage) && labelB.equals(oImage) && labelC.equals(oImage))
+                return 2;
+        }
+        for(int i = 0; i < 3; i += 1){
+            Icon labelA = jlabels[i].getIcon(), labelB = jlabels[i+3].getIcon(), labelC = jlabels[i+6].getIcon();
+
+            if(labelA == null || labelB == null || labelC == null) {
+                //continue on to the next iteration of the loop
+            }
+            else if(labelA.equals(xImage) && labelB.equals(xImage) && labelC.equals(xImage))
+                return 1;
+            else if(labelA.equals(oImage) && labelB.equals(oImage) && labelC.equals(oImage))
+                return 2;
+        }
+
+        if(jlabels[0].getIcon() == null || jlabels[4].getIcon() == null || jlabels[8].getIcon() == null) {
+            //do nothing, just move on to check other diagonal
+        }
+        else if(jlabels[0].getIcon().equals(xImage) && jlabels[4].getIcon().equals(xImage) && jlabels[8].getIcon().equals(xImage))
+            return 1;
+        else if(jlabels[0].getIcon().equals(oImage) && jlabels[4].getIcon().equals(oImage) && jlabels[8].getIcon().equals(oImage))
+            return 2;
+
+        if(jlabels[2].getIcon() == null || jlabels[4].getIcon() == null || jlabels[6].getIcon() == null) {
+            //do nothing, just move on to check other diagonal
+        }
+        else if(jlabels[2].getIcon().equals(xImage) && jlabels[4].getIcon().equals(xImage) && jlabels[6].getIcon().equals(xImage))
+            return 1;
+        else if(jlabels[2].getIcon().equals(oImage) && jlabels[4].getIcon().equals(oImage) && jlabels[6].getIcon().equals(oImage))
+            return 2;
+
         return 0;
     }
 }
