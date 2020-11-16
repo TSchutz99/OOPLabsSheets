@@ -6,6 +6,7 @@ operate*/
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
@@ -35,7 +36,7 @@ public class GridLayoutMouseEvent extends JFrame{
             jlabels.add(currentLabel);
             currentLabel.setBorder(BorderFactory.createEtchedBorder(Color.GREEN, Color.RED));
             add(currentLabel);
-            currentLabel.addMouseListener(new MouseListener() {
+            currentLabel.addMouseListener(new MouseAdapter(){
                 public void mouseClicked(MouseEvent e) {
                      clickEventCounter++;
 
@@ -80,12 +81,6 @@ public class GridLayoutMouseEvent extends JFrame{
                          /*I have omitted about 6/7 lines of code here which reset the game back to its original state
                          so the user can play again. This is for an exercise that follows this */
                      }
-                }
-                public void mousePressed(MouseEvent e) {
-                    System.out.println("Mouse was pressed");
-                }
-                public void mouseReleased(MouseEvent e) {
-                    System.out.println("Mouse was released");
                 }
                 public void mouseEntered(MouseEvent e) {
                     JLabel label = (JLabel) e.getSource();
