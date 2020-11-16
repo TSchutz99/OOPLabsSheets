@@ -56,7 +56,7 @@ public class GridLayoutMouseEvent extends JFrame{
                          clickEventCounter--;
                      }
 
-                     if(clickEventCounter>=5&&clickEventCounter<=9) {
+                     if(clickEventCounter>=7&&clickEventCounter<=16) {
                          result = checkForWinner();
 
                          if (result == 1)
