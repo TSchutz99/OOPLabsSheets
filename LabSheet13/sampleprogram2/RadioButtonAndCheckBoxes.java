@@ -1,4 +1,4 @@
-package labsheet13.sampleprogram2;
+package LabSheet13.sampleprogram2;
 
 //RadioButtonAndCheckBoxesExample.java
 /*This program illustrates the use of radiobuttons

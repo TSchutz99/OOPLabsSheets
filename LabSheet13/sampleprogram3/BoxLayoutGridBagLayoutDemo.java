@@ -1,4 +1,4 @@
-package labsheet13.sampleprogram3;
+package LabSheet13.sampleprogram3;
 
 //BoxLayoutGridBagLayoutDemo.java
 /*This program uses box-layout and gridbag-layout managers in combination with a
