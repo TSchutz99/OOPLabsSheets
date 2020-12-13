@@ -5,7 +5,6 @@ package LabSheet17.sampleprogram1;
 that might be thrown by various mutators and also to handle NumberFormatExceptions that might be thrown
 by improper numeric input*/
 
-import labsheet16.exercise1solution.Book;
 
 import javax.swing.*;
 
