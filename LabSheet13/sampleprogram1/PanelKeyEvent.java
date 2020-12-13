@@ -1,4 +1,4 @@
-package labsheet13.sampleprogram1;
+package LabSheet13.sampleprogram1;
 
 //PanelKeyEvent.java
 /*This program shows how panels can be used with various layout managers to create
