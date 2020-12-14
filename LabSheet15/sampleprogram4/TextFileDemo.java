@@ -12,7 +12,7 @@ public class TextFileDemo {
 
     public static void main(String args[]) {
 
-        JFileChooser fileChooser = new JFileChooser("C:/users/documents");
+        JFileChooser fileChooser = new JFileChooser("C:/Users/fauns/IdeaProjects");
         int status = fileChooser.showOpenDialog(null);
 
         File selectedFile = null;
